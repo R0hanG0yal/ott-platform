@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 900" width="600" height="900">
+  <defs>
+    <linearGradient id="skyWarm" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0b2d42"/>
+      <stop offset="38%" stop-color="#196b7a"/>
+      <stop offset="72%" stop-color="#f59e36"/>
+      <stop offset="100%" stop-color="#1a0f0a"/>
+    </linearGradient>
+    <radialGradient id="sunGlow" cx="50%" cy="56%" r="44%">
+      <stop offset="0%" stop-color="#fff0b3" stop-opacity="0.95"/>
+      <stop offset="45%" stop-color="#f7941d" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#000" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="fadeBot2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#000" stop-opacity="0"/>
+      <stop offset="58%" stop-color="#000" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#000" stop-opacity="0.96"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="900" fill="url(#skyWarm)"/>
+  <circle cx="300" cy="480" r="250" fill="url(#sunGlow)"/>
+  <!-- Historic University Arches Background -->
+  <g fill="#122330" opacity="0.45">
+    <rect x="0" y="470" width="600" height="190"/>
+    <path d="M55 660 L55 540 A45 45 0 0 1 145 540 L145 660 Z" fill="#f5a640" opacity="0.4"/>
+    <path d="M180 660 L180 540 A45 45 0 0 1 270 540 L270 660 Z" fill="#f5a640" opacity="0.4"/>
+    <path d="M330 660 L330 540 A45 45 0 0 1 420 540 L420 660 Z" fill="#f5a640" opacity="0.4"/>
+    <path d="M455 660 L455 540 A45 45 0 0 1 545 540 L545 660 Z" fill="#f5a640" opacity="0.4"/>
+    <polygon points="300,360 220,470 380,470"/>
+    <rect x="285" y="315" width="30" height="50"/>
+    <circle cx="300" cy="312" r="18"/>
+  </g>
+  <!-- Paper Airplanes & Equations -->
+  <g fill="#fff4d6" opacity="0.82">
+    <polygon points="105,215 178,185 142,232"/>
+    <polygon points="142,232 178,185 154,244" opacity="0.5"/>
+    <polygon points="420,165 495,148 455,190"/>
+    <polygon points="455,190 495,148 468,200" opacity="0.5"/>
+    <polygon points="295,120 350,110 322,138"/>
+  </g>
+  <g fill="none" stroke="#fff3d1" stroke-width="1.5" stroke-dasharray="5 7" opacity="0.35">
+    <path d="M30 275 Q115 245 142 225"/>
+    <path d="M360 220 Q415 195 455 180"/>
+  </g>
+  <!-- Iconic Yellow-Orange Bench / Wall -->
+  <rect x="45" y="610" width="510" height="24" rx="8" fill="#d97718"/>
+  <rect x="65" y="634" width="470" height="120" fill="#171211" opacity="0.88"/>
+  <!-- Three Friends Silhouettes Sitting Together -->
+  <g fill="#120c0b">
+    <!-- Friend 1 (Left, pointing up laughing) -->
+    <circle cx="175" cy="438" r="34"/>
+    <path d="M126 612 L138 486 C142 468 205 468 212 486 L224 612 Z"/>
+    <path d="M140 502 L92 435" stroke="#120c0b" stroke-width="20" stroke-linecap="round"/>
+    <!-- Friend 2 (Center, arms around friends) -->
+    <circle cx="300" cy="422" r="36"/>
+    <path d="M248 612 L258 474 C262 454 338 454 342 474 L352 612 Z"/>
+    <path d="M262 490 L195 486" stroke="#120c0b" stroke-width="20" stroke-linecap="round"/>
+    <path d="M338 490 L405 486" stroke="#120c0b" stroke-width="20" stroke-linecap="round"/>
+    <!-- Friend 3 (Right, backpack) -->
+    <circle cx="425" cy="442" r="34"/>
+    <path d="M376 612 L388 490 C392 472 455 472 462 490 L474 612 Z"/>
+    <rect x="448" y="495" width="28" height="72" rx="12" fill="#2c1d19"/>
+  </g>
+  <!-- Warm Rim Light on Shoulders -->
+  <g fill="none" stroke="#ffcf75" stroke-width="2.5" opacity="0.65">
+    <path d="M146 422 A34 34 0 0 1 206 422"/>
+    <path d="M268 404 A36 36 0 0 1 332 404"/>
+    <path d="M395 426 A34 34 0 0 1 454 426"/>
+  </g>
+  <rect width="600" height="900" fill="url(#fadeBot2)"/>
+</svg>

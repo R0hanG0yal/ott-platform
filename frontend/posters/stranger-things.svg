@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 900" width="600" height="900">
+  <defs>
+    <linearGradient id="nightSky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#06081a"/>
+      <stop offset="38%" stop-color="#190826"/>
+      <stop offset="68%" stop-color="#61091d"/>
+      <stop offset="100%" stop-color="#05050a"/>
+    </linearGradient>
+    <radialGradient id="riftGlow" cx="50%" cy="34%" r="48%">
+      <stop offset="0%" stop-color="#ff2e4c" stop-opacity="0.95"/>
+      <stop offset="35%" stop-color="#c20a24" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#000" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="beam" x1="0" y1="1" x2="0.4" y2="0">
+      <stop offset="0%" stop-color="#dff6ff" stop-opacity="0.65"/>
+      <stop offset="100%" stop-color="#dff6ff" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="fadeBot3" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#000" stop-opacity="0"/>
+      <stop offset="58%" stop-color="#000" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#000" stop-opacity="0.96"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="900" fill="url(#nightSky)"/>
+  <!-- Stars & Upside Down Spores -->
+  <g fill="#ffd4dc" opacity="0.65">
+    <circle cx="85" cy="95" r="2"/><circle cx="160" cy="140" r="1.5"/><circle cx="490" cy="110" r="2"/>
+    <circle cx="520" cy="210" r="1.8"/><circle cx="110" cy="260" r="1.5"/><circle cx="440" cy="285" r="2.2"/>
+    <circle cx="240" cy="80" r="1.4"/><circle cx="375" cy="70" r="1.6"/><circle cx="310" cy="185" r="2"/>
+  </g>
+  <!-- Supernatural Crimson Rift & Lightning -->
+  <ellipse cx="300" cy="300" rx="220" ry="200" fill="url(#riftGlow)"/>
+  <path d="M300 75 L286 155 L322 182 L272 275 L312 296 L262 395 L320 308 L294 278 L342 185 L306 152 Z" fill="#ff7085" opacity="0.9"/>
+  <path d="M298 110 L240 190 L264 202 L212 278" fill="none" stroke="#ff3855" stroke-width="3" opacity="0.7"/>
+  <path d="M312 140 L378 210 L356 225 L410 295" fill="none" stroke="#ff3855" stroke-width="3" opacity="0.7"/>
+  <!-- Upside Down Silhouette Monster Tendrils -->
+  <g fill="none" stroke="#1b0309" stroke-width="8" stroke-linecap="round" opacity="0.75">
+    <path d="M300 280 Q210 220 135 285"/>
+    <path d="M300 280 Q390 220 465 285"/>
+    <path d="M300 300 Q220 330 165 415"/>
+    <path d="M300 300 Q380 330 435 415"/>
+  </g>
+  <!-- Pine Forest Horizon -->
+  <g fill="#08060e">
+    <polygon points="0,600 45,380 90,600"/>
+    <polygon points="55,600 105,410 155,600"/>
+    <polygon points="115,600 155,460 195,600"/>
+    <polygon points="415,600 455,445 495,600"/>
+    <polygon points="465,600 515,390 565,600"/>
+    <polygon points="525,600 570,350 615,600"/>
+    <rect x="0" y="575" width="600" height="325"/>
+  </g>
+  <!-- Perspective Misty Road -->
+  <polygon points="275,575 325,575 495,900 105,900" fill="#140c1a"/>
+  <line x1="300" y1="585" x2="300" y2="880" stroke="#7a3245" stroke-width="4" stroke-dasharray="18 22" opacity="0.55"/>
+  <!-- Flashlight Beams -->
+  <polygon points="245,620 160,415 268,420" fill="url(#beam)"/>
+  <polygon points="355,620 342,415 445,420" fill="url(#beam)"/>
+  <!-- Kids on Bikes Silhouettes -->
+  <g fill="#050408" stroke="#221329" stroke-width="2">
+    <circle cx="240" cy="656" r="18" fill="none" stroke="#ff526c" stroke-width="2.5" opacity="0.6"/>
+    <circle cx="300" cy="645" r="20" fill="none" stroke="#ff526c" stroke-width="2.5" opacity="0.7"/>
+    <circle cx="360" cy="656" r="18" fill="none" stroke="#ff526c" stroke-width="2.5" opacity="0.6"/>
+    <!-- Riders -->
+    <circle cx="240" cy="596" r="12" fill="#06040a"/>
+    <rect x="230" y="608" width="20" height="34" rx="6" fill="#06040a"/>
+    <circle cx="300" cy="582" r="13" fill="#06040a"/>
+    <rect x="288" y="596" width="24" height="38" rx="7" fill="#06040a"/>
+    <circle cx="360" cy="596" r="12" fill="#06040a"/>
+    <rect x="350" y="608" width="20" height="34" rx="6" fill="#06040a"/>
+  </g>
+  <rect width="600" height="900" fill="url(#fadeBot3)"/>
+</svg>

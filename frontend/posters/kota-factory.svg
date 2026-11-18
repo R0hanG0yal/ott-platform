@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 900" width="600" height="900">
+  <defs>
+    <linearGradient id="bwBg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#171717"/>
+      <stop offset="45%" stop-color="#2c2c2c"/>
+      <stop offset="100%" stop-color="#050505"/>
+    </linearGradient>
+    <radialGradient id="lampCone" cx="62%" cy="46%" r="48%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.72"/>
+      <stop offset="42%" stop-color="#cfcfcf" stop-opacity="0.22"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="fadeBot5" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#000" stop-opacity="0"/>
+      <stop offset="56%" stop-color="#000" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#000" stop-opacity="0.97"/>
+    </linearGradient>
+  </defs>
+  <!-- Iconic Monochrome Kota Factory Aesthetic -->
+  <rect width="600" height="900" fill="url(#bwBg)"/>
+  <!-- Hostel Window with Rainy Night Grid -->
+  <g opacity="0.45">
+    <rect x="64" y="108" width="230" height="290" fill="#101010" stroke="#707070" stroke-width="5"/>
+    <line x1="179" y1="108" x2="179" y2="398" stroke="#707070" stroke-width="4"/>
+    <line x1="64" y1="253" x2="294" y2="253" stroke="#707070" stroke-width="4"/>
+    <!-- Distant coaching hostel windows -->
+    <rect x="92" y="165" width="16" height="22" fill="#d9d9d9" opacity="0.4"/>
+    <rect x="128" y="195" width="14" height="18" fill="#d9d9d9" opacity="0.25"/>
+    <rect x="215" y="150" width="18" height="24" fill="#d9d9d9" opacity="0.35"/>
+    <rect x="242" y="210" width="14" height="18" fill="#d9d9d9" opacity="0.3"/>
+  </g>
+  <!-- Wall Formulas & Timetable Sticky Notes -->
+  <g fill="#cfcfcf" opacity="0.24">
+    <rect x="342" y="145" width="84" height="62" rx="2"/>
+    <rect x="442" y="130" width="76" height="86" rx="2"/>
+    <rect x="358" y="228" width="112" height="54" rx="2"/>
+  </g>
+  <!-- Desk Lamp Glow -->
+  <circle cx="385" cy="430" r="250" fill="url(#lampCone)"/>
+  <polygon points="435,365 265,610 535,610" fill="#ffffff" opacity="0.12"/>
+  <!-- Desk Lamp Fixture -->
+  <g stroke="#d4d4d4" stroke-width="8" stroke-linecap="round" fill="none">
+    <path d="M510 595 L495 450 L442 382"/>
+  </g>
+  <path d="M405 398 L452 360 L476 388 L422 418 Z" fill="#e5e5e5"/>
+  <rect x="476" y="592" width="68" height="14" rx="4" fill="#a3a3a3"/>
+  <!-- Study Desk & Stacks of Textbooks -->
+  <rect x="35" y="605" width="530" height="22" rx="3" fill="#4a4a4a"/>
+  <rect x="48" y="627" width="504" height="180" fill="#0d0d0d"/>
+  <!-- Stack of Physics/Chemistry Books -->
+  <g>
+    <rect x="74" y="578" width="106" height="27" rx="2" fill="#8f8f8f"/>
+    <rect x="82" y="553" width="96" height="25" rx="2" fill="#c2c2c2"/>
+    <rect x="78" y="530" width="92" height="23" rx="2" fill="#6e6e6e"/>
+    <rect x="88" y="510" width="78" height="20" rx="2" fill="#adadad"/>
+    <!-- Coffee mug -->
+    <rect x="410" y="566" width="32" height="39" rx="4" fill="#d9d9d9"/>
+    <path d="M442 574 A10 10 0 0 1 442 596" fill="none" stroke="#d9d9d9" stroke-width="4"/>
+  </g>
+  <!-- Determined Student Studying Silhouette -->
+  <g fill="#121212">
+    <circle cx="288" cy="436" r="42"/>
+    <path d="M210 605 L226 495 C235 470 338 470 352 498 L374 605 Z"/>
+    <!-- Glasses rim highlight -->
+    <circle cx="312" cy="442" r="9" fill="none" stroke="#e5e5e5" stroke-width="2.5" opacity="0.8"/>
+    <!-- Open notebook on desk -->
+    <polygon points="245,605 385,605 370,582 260,582" fill="#ebebeb" opacity="0.9"/>
+  </g>
+  <!-- Subtle red Netflix accent dot on pen/bookmark -->
+  <rect x="348" y="592" width="34" height="5" rx="2" fill="#e50914"/>
+  <rect width="600" height="900" fill="url(#fadeBot5)"/>
+</svg>
