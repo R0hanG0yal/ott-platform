@@ -5,6 +5,9 @@ import os
 import re
 import secrets
 import sqlite3
+import threading
+import urllib.request
+from contextlib import asynccontextmanager
 from datetime import date, datetime
 from decimal import Decimal
 from pathlib import Path
@@ -465,7 +468,42 @@ class DatabaseBridge:
 
 db = DatabaseBridge()
 
-app = FastAPI(title="Netflix OTT Frontend Bridge", version="1.0.0")
+KEEP_ALIVE_URL = (os.getenv("KEEP_ALIVE_URL") or os.getenv("RENDER_EXTERNAL_URL") or "").rstrip("/")
+KEEP_ALIVE_INTERVAL_SECONDS = int(os.getenv("KEEP_ALIVE_INTERVAL_SECONDS", "840"))  # 14 minutes
+
+
+def _keep_alive_worker(stop_event: threading.Event, target_url: str, interval_seconds: int) -> None:
+    health_url = f"{target_url}/api/health"
+    while not stop_event.wait(interval_seconds):
+        try:
+            req = urllib.request.Request(health_url, headers={"User-Agent": "NetflixOTT-KeepAlive/1.0"})
+            with urllib.request.urlopen(req, timeout=15) as resp:
+                print(f"[keep-alive] Pinged {health_url} -> {resp.status}")
+        except Exception as exc:
+            print(f"[keep-alive] Ping failed for {health_url}: {exc}")
+
+
+@asynccontextmanager
+async def lifespan(_app: FastAPI):
+    stop_event = threading.Event()
+    thread: Optional[threading.Thread] = None
+    if KEEP_ALIVE_URL:
+        print(f"[keep-alive] Enabled: pinging {KEEP_ALIVE_URL}/api/health every {KEEP_ALIVE_INTERVAL_SECONDS}s")
+        thread = threading.Thread(
+            target=_keep_alive_worker,
+            args=(stop_event, KEEP_ALIVE_URL, KEEP_ALIVE_INTERVAL_SECONDS),
+            daemon=True,
+        )
+        thread.start()
+    try:
+        yield
+    finally:
+        stop_event.set()
+        if thread is not None:
+            thread.join(timeout=1)
+
+
+app = FastAPI(title="Netflix OTT Frontend Bridge", version="1.0.0", lifespan=lifespan)
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
@@ -673,12 +711,20 @@ def get_active_subscription(user_id: int) -> Optional[Dict[str, Any]]:
 # -------------------- API Routes --------------------
 @app.get("/api/health")
 def health():
+    db_ok = True
+    try:
+        db.query_one("SELECT 1 AS alive")
+    except Exception:
+        db_ok = False
     return {
         "status": "ok",
+        "db_alive": db_ok,
         "db_mode": db.mode,
         "db_driver": db.driver or "sqlite3",
         "db_name": DB_CONFIG["database"],
         "mysql_error": db.mysql_error,
+        "keep_alive_enabled": bool(KEEP_ALIVE_URL),
+        "keep_alive_interval_seconds": KEEP_ALIVE_INTERVAL_SECONDS,
     }
 
 
